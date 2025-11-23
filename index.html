@@ -1,0 +1,1057 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dollars Accounting — Your Trusted Partner for Financial Clarity</title>
+    <meta name="description" content="Dollars Accounting provides Tax Advisory, Bookkeeping, Audit & Assurance, and Business Consulting for US businesses.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+:root {
+    /* Updated global theme: dark blue, green, white */
+    --bg: #ffffff;
+    --card: #ffffff;
+    --primary: #3c3ba8; /* dark blue */
+    --primary-dark: #2d2c84; /* deeper shade of dark blue */
+    --accent: #20815e; /* green */
+    --accent-dark: #176148; /* deeper green */
+    --muted: #6b7280; /* keep neutral gray */
+    --dark: #2d2c84; /* align dark with theme's deep blue */
+    --radius: 16px;
+    --container: 1200px;
+    --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.08);
+    --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.12);
+    --shadow-lg: 0 8px 24px rgba(15, 23, 42, 0.16);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+.site-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    max-width: var(--container);
+    margin: 0 auto;
+}
+
+.brand {
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.brand .logo {
+    height: 100px; /* 2.5x previous 40px */
+    width: auto;
+    display: block;
+}
+
+/* Two-line brand text styling */
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand-line1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+.brand-line2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-top: 0.15rem;
+}
+
+.team {
+    /* Align spacing with about section for seamless continuity */
+    margin: 0 auto 4rem; /* remove top gap so it sits closer to About */
+    max-width: var(--container);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+/* Testimonials */
+.testimonials {
+    margin: 3rem auto;
+    max-width: var(--container);
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: var(--card);
+    border: 1px solid rgba(32, 129, 94, 0.18);
+    border-left: 6px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    padding: 1.25rem 1.5rem 1.1rem;
+    position: relative;
+    text-align: left;
+}
+
+.testimonial-card::before {
+    content: '“';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    font-size: 3rem;
+    color: rgba(60, 59, 168, 0.15);
+    line-height: 1;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--dark);
+    margin: 0 0 0.9rem;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.testimonial-meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.main-nav a {
+    color: var(--dark);
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.main-nav a:hover {
+    background: rgba(11, 108, 240, 0.08);
+    color: var(--primary);
+}
+
+.cta {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(11, 108, 240, 0.3);
+}
+
+.cta:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(11, 108, 240, 0.4);
+}
+/* Hero */
+
+/* Hero */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: var(--container);
+    min-height: 400px;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: url('images/Hero.jpg') center/cover no-repeat;
+}
+
+/* If the inline <img> is used instead of CSS background, keep styling */
+.hero-img img {width:100%;height:100%;object-fit:cover;filter:brightness(0.5) saturate(1.1);display:block;}
+
+.hero-content {
+    position: relative;
+    padding: 4rem 2rem;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.lead {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(14, 165, 125, 0.3);
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(14, 165, 125, 0.4);
+}
+
+.btn-outline {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Value Props Section */
+.value-props {
+    margin: 4rem auto;
+    max-width: var(--container);
+}
+
+.section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card);
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(11, 108, 240, 0.08);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(11, 108, 240, 0.2);
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* Services Section */
+.services {
+    margin: 5rem auto;
+    max-width: var(--container);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--primary);
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--card);
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(11, 108, 240, 0.08);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(11, 108, 240, 0.2);
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* About Section */
+.about {
+    /* Reduced outer spacing and removed large min-height for tighter flow */
+    margin: 3rem auto 2rem;
+    max-width: var(--container);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 2rem 0; /* modest internal top padding */
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.about p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    width: 130px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.team-member img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+    border: 3px solid var(--primary);
+}
+
+.team-member .name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.team-member .role {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+/* Blog Preview */
+.blog-preview {
+    margin: 5rem auto;
+    max-width: var(--container);
+}
+
+.post-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.post-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.post-card h4 {
+    margin: 1rem 1.5rem;
+    font-size: 1.1rem;
+    color: var(--dark);
+}
+
+.post-card p {
+    margin: 0 1.5rem 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin: 0 1.5rem 1.5rem;
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Contact Section */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    max-width: var(--container);
+    margin: 5rem auto;
+}
+
+.contact-form {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.9rem;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    border: 2px solid #e6eef7;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-details {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-details h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.contact-details p {
+    margin-bottom: 1rem;
+    color: var(--muted);
+}
+
+/* Footer */
+.site-footer {
+    background: #0a1628;
+    color: #e6eef7;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container);
+    margin: 0 auto;
+}
+
+.footer-inner p a.credit-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-inner p a.credit-link:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Tablet: smaller CTA text */
+    .cta {
+        padding: 0.65rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    /* Hide nav and CTA button on mobile */
+    .main-nav,
+    .header-inner .cta {
+        display: none;
+    }
+    
+    /* Mobile header adjustments */
+    .header-inner {
+        padding: 1rem 1.5rem;
+    }
+    
+    /* Logo sizing for mobile */
+    .brand .logo {
+        height: 60px;
+    }
+    
+    .brand-text {
+        font-size: 0.9rem;
+    }
+    
+    .brand-line1 {
+        font-size: 1.1rem;
+    }
+    
+    .brand-line2 {
+        font-size: 0.85rem;
+    }
+    
+    /* Hero adjustments */
+    .hero {
+        margin: 1rem;
+        border-radius: 16px;
+        min-height: 300px;
+    }
+    
+    .hero h1 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .hero-content .btn {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    /* Grid layouts */
+    .grid-4,
+    .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Section spacing */
+    .about,
+    .team,
+    .testimonials,
+    .services,
+    .blog-preview {
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    
+    /* Section titles */
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Service cards */
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    /* Team cards */
+    .team-grid {
+        gap: 1rem;
+    }
+    
+    .team-member {
+        width: 140px;
+    }
+    
+    /* Testimonials */
+    .testimonials-grid {
+        gap: 1.5rem;
+    }
+    
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+    
+    /* Contact form */
+    .contact-grid {
+        padding: 0 1rem;
+    }
+    
+    .contact-form,
+    .contact-details {
+        padding: 1.5rem;
+    }
+    
+    /* Footer */
+    .footer-inner {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .footer-inner p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#">
+                <img class="logo" src="images/Dollars Accounting Logo.png" alt="Dollars Accounting logo" />
+                <span class="brand-text" aria-label="Dollars Accounting">
+                    <span class="brand-line1">DOLLARS</span>
+                    <span class="brand-line2">ACCOUNTING</span>
+                </span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#contact">Schedule a Consultation</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-img">
+                <!-- Fallback img tag if CSS background fails or for SEO; remove if not needed -->
+                <img src="images/Hero.jpg" alt="Financial analytics dashboard illustration symbolizing accounting clarity" loading="lazy" />
+            </div>
+            <div class="hero-content fade-in">
+                <h1>Expert Financial Guidance for Your Business</h1>
+                <p class="lead">We help businesses reduce tax liabilities, streamline bookkeeping, and grow with confidence.</p>
+                <div class="hero-actions">
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="value-props">
+            <div class="section-wrapper">
+                <div class="grid-4">
+                    <div class="card fade-in">
+                        <h3>Tax Savings</h3>
+                        <p>Reduce your tax burden with strategic planning and proactive compliance.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <h3>CFO Services</h3>
+                        <p>Expert financial leadership without the full-time cost.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <h3>Clean Books</h3>
+                        <p>Always-ready financials for investors and decision-making.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <h3>Growth Advisory</h3>
+                        <p>Strategic guidance to scale your business profitably.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <h2 class="section-title">Our Services</h2>
+            <div class="grid-3">
+                <div class="service-card fade-in">
+                    <h3>Tax Preparation</h3>
+                    <p>Corporate and personal tax return preparation with quarterly estimates, compliance support, and IRS representation.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>Tax Planning</h3>
+                    <p>Strategic tax planning to optimize deductions, minimize liabilities year-round, and maximize savings opportunities.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>Bookkeeping</h3>
+                    <p>Monthly bookkeeping, bank reconciliations, financial statement preparation, and clean financial records.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>Payroll Services</h3>
+                    <p>Complete payroll processing, payroll tax filings, compliance management, and employee setup.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>CFO Services</h3>
+                    <p>Fractional CFO support for strategic financial leadership, growth planning, and executive-level insights.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>Audit & Assurance</h3>
+                    <p>Independent financial review, internal controls evaluation, and assurance services for stakeholder trust.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>Business Advisory</h3>
+                    <p>Strategic consulting for M&A, business valuation, operational optimization, and performance improvement.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>Financial Planning</h3>
+                    <p>Cash flow forecasting, budgeting, scenario analysis, and long-term financial strategy development.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="testimonials-grid">
+                <blockquote class="testimonial-card fade-in">
+                    <p class="testimonial-text">Dollars Accounting gave us peace of mind for our payroll, compliance, and annual returns. Can’t recommend them enough!</p>
+                    <footer>
+                        <span class="testimonial-author">A. Daniel Alu</span>
+                        <span class="testimonial-meta"> — CEO, 5 Star Property Management LLC (Texas)</span>
+                    </footer>
+                </blockquote>
+                <blockquote class="testimonial-card fade-in">
+                    <p class="testimonial-text">Their team helped us streamline our bookkeeping and saved us thousands in taxes. Highly professional and responsive!</p>
+                    <footer>
+                        <span class="testimonial-author">Sanjeev Bhatia</span>
+                        <span class="testimonial-meta"> — CEO, Nice Properties Group (Los Angeles)</span>
+                    </footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-grid">
+                <div>
+                    <h2>About Dollars Accounting</h2>
+                    <p><strong>Founded:</strong> 2020 — <strong>Mission:</strong> To provide clarity and confidence for business owners through trusted financial services.</p>
+                    <p>Our core values: Integrity, Accuracy, Collaboration, and Client-focus. We serve small-to-medium US businesses across industries.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="team">
+            <h3 style="margin-bottom: 1.5rem;">Our Team</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Portrait of Shivam Yadav, Founder">
+                    <p class="name">Shivam Yadav</p>
+                    <p class="role">Founder</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.pravatar.cc/150?img=64" alt="Portrait of Anshum, Senior Accountant (male)" loading="lazy">
+                    <p class="name">Anshum</p>
+                    <p class="role">Sr. Accountant</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.pravatar.cc/150?img=33" alt="Portrait of Vivek, Accountant">
+                    <p class="name">Vivek</p>
+                    <p class="role">Accountant</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.pravatar.cc/150?img=68" alt="Portrait of Nishant, Accountant">
+                    <p class="name">Nishant</p>
+                    <p class="role">Accountant</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Portrait of Dev, Intern (smart professional)" loading="lazy">
+                    <p class="name">Dev</p>
+                    <p class="role">Intern</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-preview">
+            <h2 class="section-title">Resources & Insights</h2>
+            <div class="grid-3">
+                <div class="post-card fade-in">
+                    <img src="images/Tax prep.png" alt="Tax preparation documents checklist for 2025 filings" loading="lazy">
+                    <h4>Tax Prep Checklist for 2025</h4>
+                    <p>Top tips to gather documents and maximize deductions for 2025 filings.</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+                <div class="post-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Bookkeeping">
+                    <h4>Monthly Bookkeeping Best Practices</h4>
+                    <p>Set a monthly cadence so your financials are always investor-ready.</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+                <div class="post-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Payroll">
+                    <h4>Payroll Compliance Guide</h4>
+                    <p>Ensure payroll taxes and filings are handled correctly with this checklist.</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-grid">
+            <form class="contact-form" action="https://formspree.io/f/xjkzzwek" method="POST">
+                <h2 style="margin-bottom: 1.5rem;">Get in Touch</h2>
+                <label>
+                    Name
+                    <input type="text" name="name" placeholder="Your name" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="your@email.com" required>
+                </label>
+                <label>
+                    Message
+                    <textarea name="message" placeholder="How can we help you?" required></textarea>
+                </label>
+                <!-- Honeypot field to reduce spam -->
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; border: none;">Send Message</button>
+            </form>
+            <div class="contact-details">
+                <h3>Contact Information</h3>
+                <p><strong>Email:</strong> hello@dollarsaccounting.something something.com</p>
+                <p><strong>Phone:</strong> +91-123-456-7890</p>
+                <p><strong>Address:</strong> Somewhere in New Delhi, India</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2025 Dollars Accounting. All rights reserved.</p>
+            <p>Designed and Developed by <a class="credit-link" href="https://www.linkedin.com/in/devgghya-kulshrestha-88909b314/" target="_blank" rel="noopener noreferrer" aria-label="WebGraphic Bee LinkedIn profile">Devgghya Kulshrestha</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(el);
+        });
+
+        // Form submission handler
+        (function(){
+            const form = document.querySelector('.contact-form');
+            if (!form) return;
+            form.addEventListener('submit', function(e){
+                // If posting to Formspree, allow normal submit
+                if (this.action && this.action.includes('formspree.io')) {
+                    return; // do not preventDefault
+                }
+                // Local demo fallback
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+        })();
+    </script>
+</body>
+</html>
